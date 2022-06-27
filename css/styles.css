@@ -658,8 +658,10 @@ content: "";
     overflow: hidden;
     align-items: center; 
     }
-.project:hover .overlay {
-    transform: translateY(100%);
+
+
+.projekt:hover .overlay {
+    transform: translateY(0);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -669,7 +671,7 @@ content: "";
     left: 0;
     width: 100%;
     height: 100%;
-    transform: translateY(0);
+    transform: translateY(100%);
     background-color: rgba(33, 150, 243, 0.9);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -699,7 +701,7 @@ content: "";
     width: 322px;
     height: 36px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 36px;
     letter-spacing: 0.06em;
     margin: 0px;
@@ -717,4 +719,40 @@ content: "";
     letter-spacing: 0.03em;
     margin: 0px;
     padding: 0px;
+}
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 528px;
+    min-height: 581px;
+    background-color: #fff;
+}
+.close-btn {
+    position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
